@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', router());
 
 
-app.get('/home', (req: express.Request, res: express.Response) => res.send("Welcome to home page"));
+app.get('/', (req: express.Request, res: express.Response) => res.send("Welcome to home page"));
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log(`app listening on port ${PORT}`))
