@@ -2,15 +2,13 @@
 FROM node:20.7.0
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /
 
 # Copy package.json and package-lock.json files
 COPY package*.json ./
 
 # Install dependencies
 RUN npm install
-
-RUN npm run build
 
 # Copy the rest of your application code
 COPY . .
